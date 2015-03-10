@@ -1,0 +1,98 @@
+/***************************************************
+ * Global
+ **************************************************/
+
+a
+{
+	color: #78070b;
+	text-decoration: none;
+}
+
+body
+{
+	font-family: Lato;
+	height: 600px;
+	margin: 0px auto;
+	padding: 0px;
+	position: relative;
+	width: 900px;
+}
+
+h1,
+h2
+{
+	margin: 0px;
+}
+
+html
+{
+	background-image: url("../images/54876.jpg");
+	background-position-x: center;
+	background-repeat: no-repeat;
+}
+
+iframe
+{
+	display: inline;
+	padding:0px 20px;
+}
+
+table
+{
+	width: 100%;
+}
+
+td
+{
+	padding: 10px;
+}
+
+#container
+{
+	background-color: rgba(255,255,255,0.75);
+	height: 590px;
+	position: absolute;
+	width: 100%;
+}
+
+#container > *
+{
+	padding: 5px;
+}
+
+#content
+{
+	color: black;
+	position: relative;
+}
+
+#content table
+{
+	table-layout: fixed;
+}
+
+#footer
+{
+	font-size: 12px;
+	padding: 5px;
+	position: absolute;
+	top: 350px;
+	z-index: -1;
+}
+
+#footer img
+{
+	width: 100%;
+}
+
+#menu
+{
+	padding-top: 25px;
+	text-align: center;
+}
+
+#menu h3
+{
+	display: inline;
+}
+
