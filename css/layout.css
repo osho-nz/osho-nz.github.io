@@ -4,8 +4,7 @@
 
 a
 {
-	color: #78070b;
-	text-decoration: none;
+	color: #0713fd;
 }
 
 body
@@ -22,6 +21,8 @@ h1,
 h2,
 h3
 {
+	color: #78070b;
+	padding: 0px 5px;
 	margin: 0px;
 }
 
@@ -58,27 +59,38 @@ html
 	position: relative;
 }
 
-.event
+.sectionCenter
 {
 	overflow: auto;
+	padding: 5px;
+	text-align: center;
 }
 
-.eventImageLeft
+.sectionLeft
+{
+	overflow: auto;
+	padding: 5px;
+	text-align: left;
+}
+
+.sectionLeft img
 {
 	float: left;
 	margin-right: 5px;
 	max-width: 45%;
 }
 
-.eventImageRight
+.sectionRight
+{
+	overflow: auto;
+	padding: 5px;
+	text-align: right;
+}
+
+.sectionRight img
 {
 	float: right;
 	margin-left: 5px;
 	max-width: 45%;
-}
-
-.quote
-{
-	text-align: center;
 }
 
