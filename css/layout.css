@@ -122,12 +122,16 @@ html
 
 	html
 	{
-		background: none;
+		background: transparent;
 	}
 
-	img
+	.sectionLeft img
 	{
-		max-width: 90%;
+		max-width: 100%;
+	}
+
+	.sectionRight img
+	{
+		max-width: 100%;
 	}
 }
-
