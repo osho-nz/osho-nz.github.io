@@ -41,6 +41,10 @@ html
 	background-repeat: no-repeat;
 }
 
+/***************************************************
+ * Container
+ **************************************************/
+
 #container
 {
 	background-color: rgba(255,255,255,0.75);
@@ -58,6 +62,10 @@ html
 	color: black;
 	position: relative;
 }
+
+/***************************************************
+ * Sections
+ **************************************************/
 
 .sectionCenter
 {
@@ -92,5 +100,34 @@ html
 	float: right;
 	margin-left: 5px;
 	max-width: 45%;
+}
+
+/***************************************************
+ * Smaller screens (e.g. mobile)
+ **************************************************/
+
+@media only screen and (min-width: 700px)
+{
+	body
+	{
+		width: 100%;
+	}
+
+	h3,
+	p
+	{
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	html
+	{
+		background: none;
+	}
+
+	img
+	{
+		max-width: 90%;
+	}
 }
 
