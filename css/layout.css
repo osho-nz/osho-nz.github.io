@@ -9,8 +9,8 @@ a
 
 body
 {
+	background-color: rgba(255,255,255,0.75);
 	font-family: Lato;
-	height: 600px;
 	margin: 0px auto;
 	padding: 0px;
 	position: relative;
@@ -39,28 +39,6 @@ html
 	background-image: url("../images/background.jpg");
 	background-position-x: center;
 	background-repeat: no-repeat;
-}
-
-/***************************************************
- * Container
- **************************************************/
-
-#container
-{
-	background-color: rgba(255,255,255,0.75);
-	position: absolute;
-	width: 100%;
-}
-
-#container > *
-{
-	padding: 5px;
-}
-
-#content
-{
-	color: black;
-	position: relative;
 }
 
 /***************************************************
@@ -106,7 +84,7 @@ html
  * Smaller screens (e.g. mobile)
  **************************************************/
 
-@media only screen and (min-width: 700px)
+@media only screen and (max-width: 700px)
 {
 	body
 	{
