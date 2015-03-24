@@ -9,7 +9,7 @@ a
 
 body
 {
-	background-color: rgba(255,255,255,0.75);
+	background-color: rgba(255,255,255,0.9);
 	font-family: Lato;
 	margin: 0px auto;
 	padding: 0px;
@@ -26,19 +26,9 @@ h3
 	margin: 0px;
 }
 
-h3,
-p
-{
-	margin-left: 100px;
-	margin-right: 100px;
-}
-
 html
 {
-	background-attachment: fixed;
 	background-image: url("../images/background.jpg");
-	background-position-x: center;
-	background-repeat: no-repeat;
 }
 
 /***************************************************
@@ -91,13 +81,6 @@ html
 	body
 	{
 		width: 100%;
-	}
-
-	h3,
-	p
-	{
-		margin-left: 5px;
-		margin-right: 5px;
 	}
 
 	html
