@@ -12,9 +12,19 @@ body
 	background-color: rgba(255,255,255,0.9);
 	font-family: Lato;
 	margin: 0px auto;
-	padding: 0px;
+	padding: 5px;
 	position: relative;
 	width: 900px;
+}
+
+div
+{
+	overflow: hidden;
+}
+
+h1
+{
+	margin-bottom: 0px;
 }
 
 h1,
@@ -22,7 +32,12 @@ h2,
 h3
 {
 	color: #78070b;
-	padding: 0px;
+	margin-top: 0px;
+}
+
+h4
+{
+	display: inline;
 	margin: 0px;
 }
 
@@ -31,45 +46,23 @@ html
 	background-image: url("../images/background.jpg");
 }
 
-/***************************************************
- * Sections
- **************************************************/
-
-.sectionCenter
+iframe
 {
-	overflow: auto;
-	padding: 5px;
-	text-align: center;
+	margin-left: 5px;
+	max-width: 49%;
 }
 
-.sectionLeft
-{
-	overflow: auto;
-	padding: 5px;
-	text-align: left;
-}
-
-.sectionLeft img
-{
-	float: left;
-	margin-bottom: 5px;
-	margin-right: 5px;
-	max-width: 45%;
-}
-
-.sectionRight
-{
-	overflow: auto;
-	padding: 5px;
-	text-align: right;
-}
-
-.sectionRight img
+img
 {
 	float: right;
 	margin-bottom: 5px;
 	margin-left: 5px;
 	max-width: 45%;
+}
+
+.center
+{
+	text-align: center;
 }
 
 /***************************************************
@@ -88,12 +81,13 @@ html
 		background: transparent;
 	}
 
-	.sectionLeft img
+	iframe
 	{
+		margin-left: 0px;
 		max-width: 100%;
 	}
 
-	.sectionRight img
+	img
 	{
 		max-width: 100%;
 	}
