@@ -5,12 +5,8 @@
 a
 {
 	color: #0f76c5;
-	text-decoration: none;
-}
-
-a:hover
-{
 	cursor: pointer;
+	text-decoration: none;
 }
 
 body
@@ -61,17 +57,20 @@ html
 
 .lotus
 {
-	position: relative;
 	left: 50%;
+	position: relative;
 	transform: translateX(-50%);
 	width: 512px;
 }
 
-#book-button
+#lotus-petal-info,
+#lotus-petal-meditation,
+#lotus-petal-library
 {
-	left: 357px;
+	display: none;
+	left: 0px;
 	position: absolute;
-	top: 183px;
+	top: 0px;
 }
 
 #info-button
@@ -79,6 +78,13 @@ html
 	left: 105px;
 	position: absolute;
 	top: 155px;
+}
+
+#library-button
+{
+	left: 357px;
+	position: absolute;
+	top: 183px;
 }
 
 #lotus-bottom
@@ -99,7 +105,7 @@ html
  * Smaller screens (e.g. mobile)
  **************************************************/
 
-@media only screen and (max-width: 700px)
+@media only screen and (max-width: 1000px)
 {
 	body
 	{
