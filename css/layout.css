@@ -4,65 +4,95 @@
 
 a
 {
-	color: #0713fd;
+	color: #0f76c5;
+	text-decoration: none;
+}
+
+a:hover
+{
+	cursor: pointer;
 }
 
 body
 {
-	background-color: rgba(255,255,255,0.9);
+	color: #333;
 	font-family: Lato;
+	height: 100%;
 	margin: 0px auto;
-	padding: 5px;
 	position: relative;
+	text-align: center;
 	width: 900px;
 }
 
-div
-{
-	overflow: hidden;
-}
-
-h1
-{
-	margin-bottom: 0px;
-}
-
 h1,
-h2,
+h2
+{
+	color: #0f76c5;
+	margin: 0px;
+}
+
 h3
 {
-	color: #78070b;
-	margin-top: 0px;
-}
-
-h4
-{
-	display: inline;
-	margin: 0px;
+	color: #0f76c5;
+	margin-bottom: 0px;
 }
 
 html
 {
-	background-image: url("../images/background.jpg");
+	background-color: #99cdf5;
+	height: 100%;
 }
 
-iframe
+.section
 {
-	margin-left: 5px;
-	max-width: 49%;
+	display: none;
 }
 
-img
+#footer
 {
-	float: right;
-	margin-bottom: 5px;
-	margin-left: 5px;
-	max-width: 45%;
+	font-size: 0.8em;
+	padding-bottom: 5px;
+	width: 100%;
 }
 
-.center
+/***************************************************
+ * Lotus
+ **************************************************/
+
+.lotus
 {
-	text-align: center;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 512px;
+}
+
+#book-button
+{
+	left: 357px;
+	position: absolute;
+	top: 183px;
+}
+
+#info-button
+{
+	left: 105px;
+	position: absolute;
+	top: 155px;
+}
+
+#lotus-bottom
+{
+	margin-bottom: -140px;
+	top: -140px;
+	z-index: -1;
+}
+
+#meditation-button
+{
+	left: 238px;
+	position: absolute;
+	top: 90px;
 }
 
 /***************************************************
@@ -73,22 +103,7 @@ img
 {
 	body
 	{
-		width: 100%;
-	}
-
-	html
-	{
-		background: transparent;
-	}
-
-	iframe
-	{
-		margin-left: 0px;
-		max-width: 100%;
-	}
-
-	img
-	{
-		max-width: 100%;
+		width: 90%;
 	}
 }
+
