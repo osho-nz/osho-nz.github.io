@@ -52,6 +52,7 @@ function selectSection(sectionId)
 		$('#lotus-bottom').animate({ 'margin-bottom': '-140px', 'top': '-140px' }, { 'queue': false });
 	}
 
+	hidePetal('facebook');
 	hidePetal('info');
 	hidePetal('meditation');
 	hidePetal('library');
@@ -60,6 +61,15 @@ function selectSection(sectionId)
 // Initialise petal feedback.
 function initPetals()
 {
+	$('#facebook-button').mouseover(function()
+	{
+		showPetal('facebook');
+	});
+	$('#facebook-button').mouseout(function()
+	{
+		hidePetal('facebook');
+	});
+
 	$('#info-button').mouseover(function()
 	{
 		showPetal('info');
