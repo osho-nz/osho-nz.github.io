@@ -9,6 +9,17 @@ a
 	text-decoration: none;
 }
 
+a:hover
+{
+	color: #094675;
+}
+
+blockquote
+{
+	font-size: 0.8em;
+	font-style: italic;
+}
+
 body
 {
 	color: #333;
@@ -53,10 +64,18 @@ html
 	height: 100%;
 }
 
+td
+{
+	padding: 0 10px;
+	vertical-align: top;
+	width: 50%;
+}
+
 .notice
 {
 	background-color: #c35ec5;
 	border-radius: 20px;
+	margin: 5px;
 	padding: 5px;
 }
 
