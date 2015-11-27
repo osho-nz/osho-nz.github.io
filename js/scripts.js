@@ -98,16 +98,14 @@ function initPetals()
 	});
 }
 
-function goToMeditations()
+function goTo(sectionId, elementId)
 {
-	var section = $('#meditation');
-
-	if (section.css('display') === 'none')
+	if ($('#' + sectionId).css('display') === 'none')
 	{
 		showPetal('meditation');
 		selectSection('meditation');
 	}
 
-	var meditationPosition = section.offset();
+	var meditationPosition = $('#' + elementId).offset();
 	$("html, body").animate({scrollTop: meditationPosition.top}, "slow");
 }
