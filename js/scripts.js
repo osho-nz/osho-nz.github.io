@@ -37,19 +37,27 @@ function selectSection(sectionId)
 {
 	$('#lotus-bottom').animate({ 'margin-bottom': '0px', 'top': '0px' });
 
-	var originalDisplay = $('#' + sectionId).css('display');
+	var section = $('#' + sectionId);
+	var originalDisplay = section.css('display');
 
 	$('.section').slideUp();
 
 	if (originalDisplay === 'none')
 	{
 		selectedSection = sectionId;
-		$('#' + sectionId).slideDown();
+		section.slideDown();
+
+		var lotusTop = $('#lotus-top');
+		$('html, body').animate({scrollTop: lotusTop.offset().top + lotusTop.height()}, 'slow');
+
+		$('#up-button').fadeIn();
 	}
 	else
 	{
 		selectedSection = null;
 		$('#lotus-bottom').animate({ 'margin-bottom': '-140px', 'top': '-140px' }, { 'queue': false });
+
+		$('#up-button').fadeOut();
 	}
 
 	hidePetal('facebook');
@@ -106,6 +114,10 @@ function goTo(sectionId, elementId)
 		selectSection('meditation');
 	}
 
-	var meditationPosition = $('#' + elementId).offset();
-	$("html, body").animate({scrollTop: meditationPosition.top}, "slow");
+	$('html, body').animate({scrollTop: $('#' + elementId).offset().top}, { 'duration': 'slow', 'queue': false} );
+}
+
+function goToTop()
+{
+	$('html, body').animate({scrollTop: 0}, 'slow');
 }
