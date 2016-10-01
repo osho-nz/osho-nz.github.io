@@ -1,0 +1,135 @@
+/* Overrides */
+
+body
+{
+	background-color: #99cdf5;
+	font-family: Lato, sans-serif;
+}
+
+body > div:first-child
+{
+	min-height: 100vh;
+}
+
+h1,
+h2,
+h3
+{
+	font-weight: bold;
+}
+
+blockquote
+{
+	border-left: 5px solid #c35ec5;
+}
+
+a
+{
+	color: #c35ec5;
+	cursor: pointer;
+}
+
+a:hover
+{
+	color: #c100c5;
+}
+
+.jumbotron .panel p
+{
+	font-size: 14px;
+}
+
+/* General */
+
+.osho-page-header
+{
+	border-bottom: 1px solid #c35ec5;
+	margin-top: 0;
+	text-align: center;
+}
+
+.osho-alert-info
+{
+	background-color: #d9edf7;
+	color: #99cdf5;
+}
+
+.osho-jumbotron
+{
+	background-color: #99cdf5;
+	padding-left: 35px;
+	padding-right: 35px;
+}
+
+.osho-jumbotron-alt
+{
+	background-color: #c35ec5;
+}
+
+.osho-jumbotron-alt a
+{
+	color: #0f76c5;
+}
+
+.osho-jumbotron-alt a:hover
+{
+	color: #094675;
+}
+
+.osho-tab-content
+{
+	padding: 15px;
+}
+
+.osho-footer
+{
+	text-align: center;
+}
+
+/* Lotus */
+
+.osho-lotus
+{
+	margin: auto;
+	position: relative;
+	width: 512px;
+}
+
+#osho-lotus-petal-facebook,
+#osho-lotus-petal-info,
+#osho-lotus-petal-library,
+#osho-lotus-petal-meditation
+{
+	display: none;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+#osho-facebook-button
+{
+	left: 120px;
+	position: absolute;
+	top: 290px;
+}
+
+#osho-info-button
+{
+	left: 105px;
+	position: absolute;
+	top: 155px;
+}
+
+#osho-library-button
+{
+	left: 357px;
+	position: absolute;
+	top: 183px;
+}
+
+#osho-meditation-button
+{
+	left: 238px;
+	position: absolute;
+	top: 90px;
+}
