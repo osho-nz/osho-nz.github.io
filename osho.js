@@ -65,4 +65,5 @@ function hidePetal(petal)
 function goTo(section)
 {
 	$('html, body').animate({scrollTop: $('#osho-' + section).offset().top}, 'slow');
+	hidePetal(section);
 }

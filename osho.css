@@ -57,8 +57,13 @@ a:hover
 .osho-jumbotron
 {
 	background-color: #99cdf5;
-	padding-left: 35px;
-	padding-right: 35px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.osho-jumbotron img
+{
+	max-width: 15%;
 }
 
 .osho-jumbotron-alt
@@ -91,8 +96,14 @@ a:hover
 .osho-lotus
 {
 	margin: auto;
+	max-width: 90%;
 	position: relative;
 	width: 512px;
+}
+
+.osho-lotus img
+{
+	width: 100%;
 }
 
 #osho-lotus-petal-facebook,
@@ -108,28 +119,32 @@ a:hover
 
 #osho-facebook-button
 {
-	left: 120px;
+	left: 24%;
 	position: absolute;
-	top: 290px;
+	top: 57%;
+	width: 12.5%;
 }
 
 #osho-info-button
 {
-	left: 105px;
+	left: 20%;
 	position: absolute;
-	top: 155px;
+	top: 30%;
+	width: 12.5%;
 }
 
 #osho-library-button
 {
-	left: 357px;
+	left: 70%;
 	position: absolute;
-	top: 183px;
+	top: 36%;
+	width: 12.5%;
 }
 
 #osho-meditation-button
 {
-	left: 238px;
+	left: 46%;
 	position: absolute;
-	top: 90px;
+	top: 18%;
+	width: 12.5%;
 }
