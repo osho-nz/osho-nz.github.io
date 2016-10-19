@@ -73,10 +73,34 @@ a:hover
 
 .osho-jumbotron-alt a
 {
-	color: #0f76c5;
+	color: #006fc5;
 }
 
 .osho-jumbotron-alt a:hover
+{
+	color: #094675;
+}
+
+.osho-jumbotron-alt blockquote
+{
+	border-left: 5px solid #99cdf5;
+}
+
+.osho-panel
+{
+	background-color: #c35ec5;
+	border-color: #c35ec5;
+	display: inline-block;
+	margin-right: 10px;
+	max-width: 400px;
+}
+
+.osho-panel a
+{
+	color: #006fc5;
+}
+
+.osho-panel a:hover
 {
 	color: #094675;
 }
