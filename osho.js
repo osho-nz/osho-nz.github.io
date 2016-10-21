@@ -1,97 +1,90 @@
 $(document).ready(function()
 {
+	gapi.load('client', initGoogleClient);
 	initPetals();
 	initLibrary();
 });
 
 function initGoogleClient()
 {
-	gapi.auth.authorize(
-	{
-		client_id: '754846761819-b1vpa018ddhcl73g6a5a90kpj53kemss.apps.googleusercontent.com',
-		immediate: true,
-		scope: 'https://www.googleapis.com/auth/calendar.readonly'
-	})
+	gapi.client.setApiKey('AIzaSyA86lCP-YurzGlB0i3dsj1voDKoqpfX6ro');
+	gapi.client.load('calendar', 'v3')
 	.then(function()
 	{
-		gapi.client.load('calendar', 'v3')
-		.then(function()
+		gapi.client.calendar.events.list(
 		{
-			gapi.client.calendar.events.list(
+			'calendarId': 'info@osho.nz',
+			'maxResults': 8,
+			'timeMin': new Date().toISOString()
+		})
+		.then(function(response)
+		{
+			console.log(response);
+			response.result.items.forEach(function(event)
 			{
-				'calendarId': 'info@osho.nz',
-				'maxResults': 4,
-				'timeMin': new Date().toISOString()
-			})
-			.then(function(response)
-			{
-				console.log(response);
-				response.result.items.forEach(function(event)
+				var summary = event.summary;
+				if (summary.toLowerCase().includes('chakra breath'))
 				{
-					var summary = event.summary;
-					if (summary.toLowerCase().includes('chakra breath'))
-					{
-						summary = '<a href="http://www.osho.com/meditate/active-meditations/chakra-breathing-meditation" target="_blank">' + summary + '</a>';
-					}
-					else if (summary.toLowerCase().includes('chakra sound'))
-					{
-						summary = '<a href="http://www.osho.com/meditate/active-meditations/chakra-sounds-meditation" target="_blank">' + summary + '</a>';
-					}
-					else if (summary.toLowerCase().includes('devavani'))
-					{
-						summary = '<a href="http://www.osho.com/meditate/active-meditations/devavani-meditation" target="_blank">' + summary + '</a>';
-					}
-					else if (summary.toLowerCase().includes('evening meeting'))
-					{
-						summary = '<a href="http://www.osho.com/meditate/active-meditations/evening-meeting" target="_blank">' + summary + '</a>';
-					}
-					else if (summary.toLowerCase().includes('kundalini'))
-					{
-						summary = '<a href="http://www.osho.com/meditate/active-meditations/kundalini-meditation" target="_blank">' + summary + '</a>';
-					}
-					else if (summary.toLowerCase().includes('nadabrahma'))
-					{
-						summary = '<a href="http://www.osho.com/meditate/active-meditations/nadabrahma-meditation" target="_blank">' + summary + '</a>';
-					}
-					else if (summary.toLowerCase().includes('nataraj'))
-					{
-						summary = '<a href="http://www.osho.com/meditate/active-meditations/nataraj-meditation" target="_blank">' + summary + '</a>';
-					}
-					else if (summary.toLowerCase().includes('no dimension'))
-					{
-						summary = '<a href="http://www.osho.com/meditate/active-meditations/no-dimensions-meditation" target="_blank">' + summary + '</a>';
-					}
+					summary = '<a href="http://www.osho.com/meditate/active-meditations/chakra-breathing-meditation" target="_blank">' + summary + '</a>';
+				}
+				else if (summary.toLowerCase().includes('chakra sound'))
+				{
+					summary = '<a href="http://www.osho.com/meditate/active-meditations/chakra-sounds-meditation" target="_blank">' + summary + '</a>';
+				}
+				else if (summary.toLowerCase().includes('devavani'))
+				{
+					summary = '<a href="http://www.osho.com/meditate/active-meditations/devavani-meditation" target="_blank">' + summary + '</a>';
+				}
+				else if (summary.toLowerCase().includes('evening meeting'))
+				{
+					summary = '<a href="http://www.osho.com/meditate/active-meditations/evening-meeting" target="_blank">' + summary + '</a>';
+				}
+				else if (summary.toLowerCase().includes('kundalini'))
+				{
+					summary = '<a href="http://www.osho.com/meditate/active-meditations/kundalini-meditation" target="_blank">' + summary + '</a>';
+				}
+				else if (summary.toLowerCase().includes('nadabrahma'))
+				{
+					summary = '<a href="http://www.osho.com/meditate/active-meditations/nadabrahma-meditation" target="_blank">' + summary + '</a>';
+				}
+				else if (summary.toLowerCase().includes('nataraj'))
+				{
+					summary = '<a href="http://www.osho.com/meditate/active-meditations/nataraj-meditation" target="_blank">' + summary + '</a>';
+				}
+				else if (summary.toLowerCase().includes('no dimension'))
+				{
+					summary = '<a href="http://www.osho.com/meditate/active-meditations/no-dimensions-meditation" target="_blank">' + summary + '</a>';
+				}
 
-					var location = event.location.substring(0, event.location.indexOf(','));
-					if (location === 'The Yoga Ground')
-					{
-						location = '<a href="http://yogaground.co.nz/" target="_blank">' + location + '</a>';
-					}
+				var location = event.location.substring(0, event.location.indexOf(','));
+				if (location === 'The Yoga Ground')
+				{
+					location = '<a href="http://yogaground.co.nz/" target="_blank">' + location + '</a>';
+				}
 
-					var eventHtml =
-						'<div class="panel osho-panel">' +
-							'<div class="panel-body">' +
-								'<h4>' + formatDate(new Date(event.start.dateTime)) + '</h4>' +
-								'<h3>' + summary + '</h3>';
+				var eventHtml =
+					'<div class="panel osho-panel">' +
+						'<div class="panel-body">' +
+							'<h4>' + formatDate(new Date(event.start.dateTime)) + '</h4>' +
+							'<h3>' + summary + '</h3>';
 
-					if (event.description)
-					{
-						eventHtml +=
-								'<p>' + event.description + '</p>';
-					}
-
+				if (event.description)
+				{
 					eventHtml +=
-								'<strong>Cost</strong> $5<br />' +
-								'<strong>When?</strong> ' + formatTime(new Date(event.start.dateTime)) + ' - ' + formatTime(new Date(event.end.dateTime)) + '<br>' +
-								'<strong>Where?</strong> ' + location + ' (<a href="https://www.google.com/maps?q=' + encodeURIComponent(event.location) + '" target="_blank">map</a>)' +
-							'</div>' +
-						'</div>'
+							'<p>' + event.description + '</p>';
+				}
 
-					$('#osho-meditation-events').append(eventHtml);
-				});
-			}, handleError);
-		}, handleError);
-	}, handleError);
+				eventHtml +=
+							'<strong>Cost</strong> $5<br />' +
+							'<strong>When?</strong> ' + formatTime(new Date(event.start.dateTime)) + ' - ' + formatTime(new Date(event.end.dateTime)) + '<br>' +
+							'<strong>Where?</strong> ' + location + ' (<a href="https://www.google.com/maps?q=' + encodeURIComponent(event.location) + '" target="_blank">map</a>)' +
+						'</div>' +
+					'</div>'
+
+				$('#osho-meditation-events').append(eventHtml);
+			});
+		});
+	});
 }
 
 function handleError(err)
