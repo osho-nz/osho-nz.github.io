@@ -19,7 +19,21 @@ function initGoogleClient()
 		})
 		.then(function(response)
 		{
-			console.log(response);
+			response.result.items.sort(function(a, b)
+			{
+				if (a.start.dateTime < b.start.dateTime)
+				{
+					return -1;
+				}
+
+				if (a.start.dateTime > b.start.dateTime)
+				{
+					return 1;
+				}
+
+				return 0;
+			});
+
 			response.result.items.forEach(function(event)
 			{
 				var summary = event.summary;
