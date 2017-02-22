@@ -76,10 +76,13 @@ function initGoogleClient()
 					location = '<a href="http://yogaground.co.nz/" target="_blank">' + location + '</a>';
 				}
 
+				var start = moment.tz(event.start.dateTime, 'Pacific/Auckland');
+				var end = moment.tz(event.end.dateTime, 'Pacific/Auckland');
+
 				var eventHtml =
 					'<div class="panel osho-panel">' +
 						'<div class="panel-body">' +
-							'<h4>' + formatDate(new Date(event.start.dateTime)) + '</h4>' +
+							'<h4>' + start.format('MMMM Do') + '</h4>' +
 							'<h3>' + summary + '</h3>';
 
 				if (event.description)
@@ -90,20 +93,15 @@ function initGoogleClient()
 
 				eventHtml +=
 							'<strong>Cost</strong> $5<br />' +
-							'<strong>When?</strong> ' + formatTime(new Date(event.start.dateTime)) + ' - ' + formatTime(new Date(event.end.dateTime)) + '<br>' +
+							'<strong>When?</strong> ' + start.format('h:mma') + ' - ' + end.format('h:mma')  + '<br>' +
 							'<strong>Where?</strong> ' + location + ' (<a href="https://www.google.com/maps?q=' + encodeURIComponent(event.location) + '" target="_blank">map</a>)' +
 						'</div>' +
-					'</div>'
+					'</div>';
 
 				$('#osho-meditation-events').append(eventHtml);
 			});
 		});
 	});
-}
-
-function handleError(err)
-{
-	console.error(err);
 }
 
 function initPetals()
@@ -149,7 +147,7 @@ function initLibrary()
 {
 	$('#osho-library-tabs a').click(function(event)
 	{
-		event.preventDefault()
+		event.preventDefault();
 		$(this).tab('show');
 	});
 }
@@ -168,73 +166,4 @@ function goTo(section)
 {
 	$('html, body').animate({scrollTop: $('#osho-' + section).offset().top}, 'slow');
 	hidePetal(section);
-}
-
-function formatDate(date)
-{
-	var monthNames =
-	[
-		"January",
-		"February",
-		"March",
-		"April",
-		"May",
-		"June",
-		"July",
-		"August",
-		"September",
-		"October",
-		"November",
-		"December"
-	];
-
-	var month = monthNames[date.getMonth()];
-
-	var day = date.getDate();
-	if (day === 1 || day === 21 || day === 31)
-	{
-		day += 'st';
-	}
-	else if (day === 2 || day === 22)
-	{
-		day += 'nd';
-	}
-	else if (day === 3 || day === 23)
-	{
-		day += 'rd';
-	}
-	else
-	{
-		day += 'th';
-	}
-
-	return month + ' ' + day;
-}
-
-function formatTime(date)
-{
-	var hour = date.getHours() % 12;
-	if (hour === 0)
-	{
-		hour = 12;
-	}
-
-	var minute = date.getMinutes();
-
-	var time = hour;
-	if (minute !== 0)
-	{
-		time += ':' + minute;
-	}
-
-	if (date.getHours() >= 12)
-	{
-		time += 'pm';
-	}
-	else
-	{
-		time += 'am';
-	}
-
-	return time;
 }
