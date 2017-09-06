@@ -34,6 +34,11 @@ function initGoogleClient()
 				return 0;
 			});
 
+			if (!response.result.items.length)
+			{
+				$('#osho-meditation-events').append('<p class="osho-placeholder"><em>Oh dear, there\'s nothing here right now! Check back soon or join the mailing list to find out when the next meditation is.</em></p>');
+			}
+
 			response.result.items.forEach(function(event)
 			{
 				var summary = event.summary;
