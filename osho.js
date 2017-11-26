@@ -54,6 +54,10 @@ function initGoogleClient()
 				{
 					summary = '<a href="http://www.osho.com/meditate/active-meditations/devavani-meditation" target="_blank">' + summary + '</a>';
 				}
+                else if (summary.toLowerCase().includes('dynamic'))
+                {
+                    summary = '<a href="http://www.osho.com/meditate/active-meditations/dynamic-meditation" target="_blank">' + summary + '</a>';
+                }
 				else if (summary.toLowerCase().includes('evening meeting'))
 				{
 					summary = '<a href="http://www.osho.com/meditate/active-meditations/evening-meeting" target="_blank">' + summary + '</a>';
