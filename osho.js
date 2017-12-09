@@ -71,7 +71,7 @@ function initGoogleClient()
 				}
 				if (location.includes('Beachhaven Community Creche'))
 				{
-					$('#osho-meditation-events').append('<p>RSVP is important so please contact Manasi at 021 132 5701, <a href="mailto:manasi.wisdom@gmail.com">manasi.wisdom@gmail.com</a> or <a href="www.ayurveda-mandala.com">www.ayurveda-mandala.com</a> to confirm if you are joining.</p>');
+					$('#osho-meditation-events').append('<p>RSVP is important so please contact Manasi at 021 132 5701, <a href="mailto:manasi.wisdom@gmail.com">manasi.wisdom@gmail.com</a> or <a href="http://www.ayurveda-mandala.com" target="_blank">www.ayurveda-mandala.com</a> to confirm if you are joining.</p>');
 				}
 
 				events[location].forEach(function(event)
