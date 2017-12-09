@@ -54,10 +54,7 @@ function initGoogleClient()
 			var firstLocation = true;
 			for (var location in events)
 			{
-				if (!firstLocation)
-				{
-					$('#osho-meditation-events').append('<hr>');
-				}
+				$('#osho-meditation-events').append('<hr>');
 
 				firstLocation = false;
 
