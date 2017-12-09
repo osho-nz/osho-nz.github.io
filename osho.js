@@ -83,7 +83,7 @@ function initGoogleClient()
 					var eventHtml =
 						'<div class="panel osho-panel">' +
 							'<div class="panel-body">' +
-								'<h4>' + localStart.format('MMMM Do') + '</h4>' +
+								'<h4>' + localStart.format('dddd, MMMM Do') + '</h4>' +
 								'<h3>' + linkifySummary(event.summary) + '</h3>';
 
 					if (event.description)
