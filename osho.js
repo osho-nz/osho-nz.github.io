@@ -19,6 +19,8 @@ function initGoogleClient()
 		})
 		.then(function(response)
 		{
+			$('#osho-meditation-events').empty();
+
 			response.result.items.sort(function(a, b)
 			{
 				if (a.start.dateTime < b.start.dateTime)
