@@ -66,11 +66,11 @@ function initGoogleClient()
 				locationElements[1] = locationElements[1].substring(0, locationElements[1].length - 5);
 				$('#osho-meditation-events').append('<h3>' + locationElements + '</h3>');
 
-				if (location.includes('The Yoga Ground'))
+				if (location.indexOf('The Yoga Ground') !== -1)
 				{
 					$('#osho-meditation-events').append('<p>We host meditations every Friday and update the schedule below at the beginning of every month, come and join us :)</p>');
 				}
-				if (location.includes('Beachhaven Community Creche'))
+				if (location.indexOf('Beachhaven Community Creche') !== -1)
 				{
 					$('#osho-meditation-events').append('<p>RSVP is important so please contact Manasi at 021 132 5701, <a href="mailto:manasi.wisdom@gmail.com">manasi.wisdom@gmail.com</a> or <a href="http://www.ayurveda-mandala.com" target="_blank">www.ayurveda-mandala.com</a> to confirm if you are joining.</p>');
 				}
@@ -102,11 +102,11 @@ function initGoogleClient()
 					$('#osho-meditation-events').append(eventHtml);
 				});
 
-				if (location.includes('The Yoga Ground'))
+				if (location.indexOf('The Yoga Ground') !== -1)
 				{
 					$('#osho-meditation-events').append('<p>Yoga mats and cushions are provided.</p>');
 				}
-				else if (location.includes('Beachhaven Community Creche'))
+				else if (location.indexOf('Beachhaven Community Creche') !== -1)
 				{
 					$('#osho-meditation-events').append('<p>There will be tea and refreshments after the meditation.</p>');
 				}
@@ -195,39 +195,39 @@ function goTo(section)
 
 function linkifySummary(summary)
 {
-	if (summary.toLowerCase().includes('chakra breath'))
+	if (summary.toLowerCase().indexOf('chakra breath') !== -1)
 	{
 		return '<a href="http://www.osho.com/meditate/active-meditations/chakra-breathing-meditation" target="_blank">' + summary + '</a>';
 	}
-	else if (summary.toLowerCase().includes('chakra sound'))
+	else if (summary.toLowerCase().indexOf('chakra sound') !== -1)
 	{
 		return '<a href="http://www.osho.com/meditate/active-meditations/chakra-sounds-meditation" target="_blank">' + summary + '</a>';
 	}
-	else if (summary.toLowerCase().includes('devavani'))
+	else if (summary.toLowerCase().indexOf('devavani') !== -1)
 	{
 		return '<a href="http://www.osho.com/meditate/active-meditations/devavani-meditation" target="_blank">' + summary + '</a>';
 	}
-	else if (summary.toLowerCase().includes('dynamic'))
+	else if (summary.toLowerCase().indexOf('dynamic') !== -1)
 	{
 		return '<a href="http://www.osho.com/meditate/active-meditations/dynamic-meditation" target="_blank">' + summary + '</a>';
 	}
-	else if (summary.toLowerCase().includes('evening meeting'))
+	else if (summary.toLowerCase().indexOf('evening meeting') !== -1)
 	{
 		return '<a href="http://www.osho.com/meditate/active-meditations/evening-meeting" target="_blank">' + summary + '</a>';
 	}
-	else if (summary.toLowerCase().includes('kundalini'))
+	else if (summary.toLowerCase().indexOf('kundalini') !== -1)
 	{
 		return '<a href="http://www.osho.com/meditate/active-meditations/kundalini-meditation" target="_blank">' + summary + '</a>';
 	}
-	else if (summary.toLowerCase().includes('nadabrahma'))
+	else if (summary.toLowerCase().indexOf('nadabrahma') !== -1)
 	{
 		return '<a href="http://www.osho.com/meditate/active-meditations/nadabrahma-meditation" target="_blank">' + summary + '</a>';
 	}
-	else if (summary.toLowerCase().includes('nataraj'))
+	else if (summary.toLowerCase().indexOf('nataraj') !== -1)
 	{
 		return '<a href="http://www.osho.com/meditate/active-meditations/nataraj-meditation" target="_blank">' + summary + '</a>';
 	}
-	else if (summary.toLowerCase().includes('no dimension'))
+	else if (summary.toLowerCase().indexOf('no dimension') !== -1)
 	{
 		return '<a href="http://www.osho.com/meditate/active-meditations/no-dimensions-meditation" target="_blank">' + summary + '</a>';
 	}
