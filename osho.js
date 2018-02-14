@@ -15,7 +15,7 @@ function initGoogleClient()
 		gapi.client.calendar.events.list(
 		{
 			'calendarId': 'info@osho.nz',
-			'maxResults': 8,
+			'maxResults': 50,
 			'timeMin': new Date().toISOString()
 		})
 		.then(function(response)
