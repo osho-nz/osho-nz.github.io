@@ -66,7 +66,8 @@ function initGoogleClient()
 				locationElements[1] = locationElements[1].substring(0, locationElements[1].length - 5);
 				$('#osho-meditation-events').append('<h3>' + locationElements + '</h3>');
 
-				if (location.indexOf('The Yoga Ground') !== -1)
+				if (location.indexOf('The Yoga Ground') !== -1 ||
+                    location.indexOf('SOUL') !== -1)
 				{
 					$('#osho-meditation-events').append('<p>We host meditations every Friday and update the schedule below at the beginning of every month, come and join us :)</p>');
 				}
