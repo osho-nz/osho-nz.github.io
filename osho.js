@@ -94,7 +94,6 @@ function initGoogleClient()
 					}
 
 					eventHtml +=
-								'<strong>Cost</strong> $5 to $10 Koha<br />' +
 								'<strong>When?</strong> ' + localStart.format('h:mma') + ' - ' + localEnd.format('h:mma')  + '<br>' +
 								'<strong>Where?</strong> ' + linkifyLocation(event.location) + ' (<a href="https://www.google.com/maps?q=' + encodeURIComponent(event.location) + '" target="_blank">map</a>)' +
 							'</div>' +
@@ -103,13 +102,14 @@ function initGoogleClient()
 					$('#osho-meditation-events').append(eventHtml);
 				});
 
-				if (location.indexOf('The Yoga Ground') !== -1)
+				if (location.indexOf('The Yoga Ground') !== -1 ||
+                    location.indexOf('SOUL') !== -1)
 				{
-					$('#osho-meditation-events').append('<p>Yoga mats and cushions are provided.</p>');
+					$('#osho-meditation-events').append('<p>Yoga mats and cushions are provided. $5 to $10 Koha.</p>');
 				}
 				else if (location.indexOf('Beachhaven Community Creche') !== -1)
 				{
-					$('#osho-meditation-events').append('<p>There will be tea and refreshments after the meditation.</p>');
+					$('#osho-meditation-events').append('<p>There will be tea and refreshments after the meditation. $5 to $10 Koha.</p>');
 				}
 			}
 		});
