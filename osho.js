@@ -75,6 +75,10 @@ function initGoogleClient()
 				{
 					$('#osho-meditation-events').append('<p>RSVP is important so please contact Manasi at 021 132 5701, <a href="mailto:manasi.wisdom@gmail.com">manasi.wisdom@gmail.com</a> or <a href="http://www.ayurveda-mandala.com" target="_blank">www.ayurveda-mandala.com</a> to confirm if you are joining.</p>');
 				}
+				if (location.indexOf('Yoga CliniK') !== -1)
+				{
+                    $('#osho-meditation-events').append('<p>Please arrive ten minutes before the meditation starts. For more information contact Nitin at 021 180 650 :)</p>');
+				}
 
 				events[location].forEach(function(event)
 				{
