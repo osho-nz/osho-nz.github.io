@@ -77,7 +77,7 @@ function initGoogleClient()
 				}
 				if (location.indexOf('Yoga CliniK') !== -1)
 				{
-                    $('#osho-meditation-events').append('<p>Please arrive ten minutes before the meditation starts. For more information contact Nitin at 021 180 650 :)</p>');
+                    $('#osho-meditation-events').append('<p>Please arrive ten minutes before the meditation starts. For more information contact Nitin at 021 180 1650 :)</p>');
 				}
 
 				events[location].forEach(function(event)
