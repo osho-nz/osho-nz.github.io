@@ -43,6 +43,8 @@ function initGoogleClient()
 				return;
 			}
 
+			$('#osho-meditation-events').append('<p>Please arrive ten minutes before the meditation starts.</p>');
+
 			var events = {};
 			response.result.items.forEach(function(event)
 			{
@@ -66,18 +68,13 @@ function initGoogleClient()
 				locationElements[1] = locationElements[1].substring(0, locationElements[1].length - 5);
 				$('#osho-meditation-events').append('<h3>' + locationElements + '</h3>');
 
-				if (location.indexOf('The Yoga Ground') !== -1 ||
-                    location.indexOf('SOUL') !== -1)
-				{
-					$('#osho-meditation-events').append('<p>We host meditations every Friday and update the schedule below at the beginning of every month, come and join us :)</p>');
-				}
 				if (location.indexOf('Beachhaven Community Creche') !== -1)
 				{
 					$('#osho-meditation-events').append('<p>RSVP is important so please contact Manasi at 021 132 5701, <a href="mailto:manasi.wisdom@gmail.com">manasi.wisdom@gmail.com</a> or <a href="http://www.ayurveda-mandala.com" target="_blank">www.ayurveda-mandala.com</a> to confirm if you are joining.</p>');
 				}
 				if (location.indexOf('Yoga CliniK') !== -1)
 				{
-                    $('#osho-meditation-events').append('<p>Please arrive ten minutes before the meditation starts. For more information contact Nitin at 021 180 1650 :)</p>');
+                    $('#osho-meditation-events').append('<p>For more information contact Nitin at 021 180 1650 :)</p>');
 				}
 
 				events[location].forEach(function(event)
